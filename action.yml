@@ -1,0 +1,23 @@
+name: "Custom Action Example"
+description: "This action is an example to learn how to use custom actions"
+
+inputs:
+  file_path:
+    description: "full path for the file to modify"
+    required: true
+
+outputs:
+  file_path:
+    description: "path of variable"
+    value: ${{ inputs.file_path }}
+
+runs:
+  using: "composite"
+  steps:
+    - id: "Setup Python"
+      uses: actions/setup-python@v5 
+      with:
+        python-version: '3.9' 
+    
+    - id: "Execute Python"
+      run: python3 app.py ${{ inputs.file_path }}
