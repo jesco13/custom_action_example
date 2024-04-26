@@ -20,9 +20,8 @@ runs:
         python-version: '3.9' 
     
     - name: "show path"
-      run: |
-        ls && pwd 
-      sell: bash
+      run: ls && pwd 
+      shell: bash
 
     - name: "Execute Python"
       run: python3 app.py ${{ inputs.file_path }}
