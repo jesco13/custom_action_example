@@ -20,5 +20,5 @@ runs:
         python-version: '3.9' 
     
     - name: "Execute Python"
-      run: cd $GITHUB_ACTION_PATH && python3 app.py ${{ inputs.file_path }}
+      run: cd $GITHUB_ACTION_PATH && ls -la && python3 app.py ${{ inputs.file_path }}
       shell: bash
