@@ -20,7 +20,7 @@ runs:
         python-version: '3.9' 
     
     - name: "show path"
-      run: ls && pwd 
+      run: ls -la && pwd 
       shell: bash
 
     - name: "Execute Python"
