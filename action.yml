@@ -19,10 +19,6 @@ runs:
       with:
         python-version: '3.9' 
     
-    - name: "show path"
-      run: ls -la && pwd 
-      shell: bash
-
     - name: "Execute Python"
-      run: python3 app.py ${{ inputs.file_path }}
+      run: cd $GITHUB_ACTION_PATH && python3 app.py ${{ inputs.file_path }}
       shell: bash
